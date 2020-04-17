@@ -1,0 +1,13 @@
+#ifndef BASIC
+#define BASIC 
+
+#define PAGE_SIZE (4096) 
+#define STATE_SIZE (PAGE_SIZE)
+#define STATE_CONTENT (STATE_SIZE>>8)
+
+#define NUM_STATE_COPIES 10 
+#define TOTAL_MEMORY (STATE_SIZE*NUM_STATE_COPIES)
+
+#define NUM_CYCLES (NUM_STATE_COPIES - 1)
+
+#endif
