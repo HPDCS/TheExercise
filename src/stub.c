@@ -44,16 +44,17 @@ int main(void)
 
 	allocator_start_processing();
 	print_sequence(buffer_a, B_SIZ);
-
 	allocator_done_processing();
 
 	allocator_rollback(1);
 	allocator_start_processing();
 	print_sequence(buffer_a, B_SIZ);
+	allocator_done_processing();
 
-	allocator_rollback(1);
+	allocator_rollback(2);
 	allocator_start_processing();
 	print_sequence(buffer_a, B_SIZ);
+	allocator_done_processing();
 
 	allocator_fini();
 }
